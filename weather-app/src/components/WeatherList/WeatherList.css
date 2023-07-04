@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background-color: bisque;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 20px;
+}
+
+input:focus {
+    border: none;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: bisque;
+    padding: 30px;
+}

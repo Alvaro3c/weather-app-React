@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import WeatherCard from './WeatherCard/WeatherCard'
+import './WeatherList.css'
 
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key} //devuelve datos de tiempo en funcion de lat y long
 
@@ -44,12 +45,16 @@ const WeatherList = () => {
   }, [city])
 
   return <>
-    <form action="">
-      <input type="text" value={search} placeholder="Write down a city" onChange={onInputChanged} />
-      <button onClick={onSearch}>Search</button>
-    </form>
-    <h2>Weather info in {city}</h2>
-    {forecast.length ? forecast.map((timeSlot) => <WeatherCard key={timeSlot.dt_txt} timeSlot={timeSlot} />) : null}
+    <header>
+      <h1>Weather info in {city}</h1>
+      <form action="">
+        <input type="text" value={search} placeholder="Write down a city" onChange={onInputChanged} />
+        <button onClick={onSearch}>Search</button>
+      </form>
+    </header>
+    <section>
+      {forecast.length ? forecast.map((timeSlot) => <WeatherCard key={timeSlot.dt_txt} timeSlot={timeSlot} />) : null}
+    </section>
   </>
 
 

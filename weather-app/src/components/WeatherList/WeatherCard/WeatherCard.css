@@ -1,0 +1,24 @@
+article {
+    margin: 10px;
+    background-color: #faca8e;
+    border-radius: 30px;
+    padding: 0px 20px;
+    /* width: fit-content; */
+    min-width: 20%;
+}
+
+#date {
+    color: rgb(154, 85, 1);
+}
+
+p {
+    color: rgb(106, 71, 0);
+}
+
+
+/* @media (max-width: 400px) {
+    article {
+        width: 30%;
+    }
+
+} */
